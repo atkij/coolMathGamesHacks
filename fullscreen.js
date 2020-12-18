@@ -28,4 +28,4 @@ removePrerollAndDisplayGame()
 
 //remove addblock message
 var adblock = document.getElementsByClassName("blocker-detected-2");
-adblock.delete();
+adblock.remove();
