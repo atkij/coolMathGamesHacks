@@ -2,21 +2,30 @@
 //this can skip some ads removePrerollAndDisplayGame()
 
 //function to make element fulscreen
-function fullscreen() {
+function fullscreen () {
   let game = document.getElementById("swfgamewrapper")
   game.requestFullscreen();
 }
 
 //create a fullscreen link element
-
-var fullscreen = document.createElement("a");
-fullscreen.innerText = fullscreen;
+var center = document.createElement("center")
+var fullscreen = document.createElement("button");
+fullscreen.innerText = "fullscreen";
 fullscreen.id = "fullscreen-hack";
 fullscreen.href = "/"
-fullscreen.addEventListener("click, fucntion (e) {
+fullscreen.addEventListener("click", function (e) {
   e.preventDefault()
-  fullscreen()
+  let game = document.getElementById("html5game")
+  game.requestFullscreen();
 });
 //add fullscreen link to appropriate place
 var gamewrapper = document.getElementById("swfgamewrapper");
-gamewrapper.append(fullscreen);
+center.append(fullscreen)
+gamewrapper.append(center);
+
+//finally, skip the ads
+removePrerollAndDisplayGame()
+
+//remove addblock message
+var adblock = document.getElementsByClassName("blocker-detected-2");
+adblock.delete();
