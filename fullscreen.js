@@ -17,3 +17,6 @@ fullscreen.addEventListener("click, fucntion (e) {
   e.preventDefault()
   fullscreen()
 });
+//add fullscreen link to appropriate place
+var gamewrapper = document.getElementById("swfgamewrapper");
+gamewrapper.append(fullscreen);
