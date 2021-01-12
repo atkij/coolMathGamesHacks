@@ -15,7 +15,7 @@ fullscreen.id = "fullscreen-hack";
 fullscreen.href = "/"
 fullscreen.addEventListener("click", function (e) {
   e.preventDefault()
-  let game = document.getElementById("swfgamewrapper").firstChild();
+  let game = document.getElementById("swfgamewrapper").firstChild;
   game.requestFullscreen();
 });
 //add fullscreen link to appropriate place
