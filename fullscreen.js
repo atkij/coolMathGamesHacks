@@ -7,25 +7,33 @@ function fullscreen () {
   game.requestFullscreen();
 }
 
-//create a fullscreen link element
-var center = document.createElement("center")
-var fullscreen = document.createElement("button");
-fullscreen.innerText = "fullscreen";
-fullscreen.id = "fullscreen-hack";
-fullscreen.href = "/"
-fullscreen.addEventListener("click", function (e) {
-  e.preventDefault()
-  let game = document.getElementById("html5game")
-  game.requestFullscreen();
-});
-//add fullscreen link to appropriate place
-var gamewrapper = document.getElementById("swfgamewrapper");
-center.append(fullscreen)
-gamewrapper.append(center);
+function init () {
+  //create a fullscreen link element
+  var center = document.createElement("center")
+  var fullscreen = document.createElement("button");
+  fullscreen.innerText = "fullscreen";
+  fullscreen.id = "fullscreen-hack";
+  fullscreen.href = "/"
+  fullscreen.addEventListener("click", function (e) {
+    e.preventDefault()
+    let game = document.getElementById("html5game")
+    game.requestFullscreen();
+  });
+  //add fullscreen link to appropriate place
+  var gamewrapper = document.getElementById("swfgamewrapper");
+  center.append(fullscreen)
+  gamewrapper.append(center);
 
-//finally, skip the ads
-removePrerollAndDisplayGame()
+  //finally, skip the ads
+  removePrerollAndDisplayGame()
 
-//remove addblock message
-var adblock = document.getElementsByClassName("blocker-detected-2");
-adblock[0].remove();
+  //remove addblock message
+  var adblock = document.getElementsByClassName("blocker-detected-2");
+  adblock[0].remove();
+}
+
+if (indow.location.hostname == "www.coolmathgames.com") {
+  init();
+} else {
+  window.location.href = "https://www.coolmathgames.com";
+}
