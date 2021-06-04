@@ -32,7 +32,7 @@ function init () {
   adblock[0].remove();
 }
 
-if (indow.location.hostname == "www.coolmathgames.com") {
+if (window.location.hostname == "www.coolmathgames.com") {
   init();
 } else {
   window.location.href = "https://www.coolmathgames.com";
