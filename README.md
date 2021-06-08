@@ -1,4 +1,6 @@
 # coolMathGamesHacks
+coolMathGamesHacks has updated. Please visit https://j-a-13.github.io/cmg-hacks/update.html for more information.
+
 Tools to make games for coolmathgames.com full screen or to skip ads.
 
 To use this create a bookmark with the following url:
